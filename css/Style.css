@@ -16,6 +16,7 @@ body{
     --gris-color: #C4C4C4;
     --naranja-color: #F3610E;
     --azul-color: #1D1B45;
+    --darkazul-color: #212429;
 }
 
 h1,h2,h3{
@@ -29,7 +30,7 @@ p{
     text-align: justify;
 }
 
-/*Estilos home*/
+/*==================================Home========================================*/
 
 header{
     display: flex;
@@ -81,7 +82,6 @@ header{
     height: 400px;
     align-items: center;
     padding: 2rem;
-    
 }
 
 .franja img{
@@ -138,6 +138,7 @@ header{
 }
 
 #temas{
+    margin: 0;
     text-align: left;
     background-color: #636161;
 }
@@ -232,7 +233,7 @@ header{
     align-items: center;
 }
 
-.form-group input[type="text"]{
+.form-group input{
     margin-bottom: 8px;
     width: 100%;
     min-height: 30%;
@@ -357,12 +358,16 @@ footer .final{
 
 .tex-contenido{
     text-align: center;
-    margin: 40px;
+    margin: 150px;
     margin-bottom: 100px;
     color: var(--naranja-color);
 }
+.tex-contenido h1{
+    font-size: 40px;
+}
 
-.frm-busqueda input[type="text"]{
+.frm-bienvenida input{
+    width: 300px;
     border: none;
     background-color: rgba(196, 196, 196, 0.3);
     color: var(--gray-color);
@@ -376,17 +381,29 @@ footer .final{
     border-radius: 10%;
 }
 
+.sesion{
+    text-align: right;
+}
 
+.sesion i{
+    border-color: var(--naranja-color);
+}
 
+/*==================================Producto========================================*/
 
+.header{
+    background-color: var(--darkazul-color);
+}
 
+.franja{
+    width: 100%;
+}
 
-
-
-
-
-
-
+#paciente{
+    flex-basis: 80%;
+    background-color: var(--ligh-color);
+    padding: 30px;
+}
 
 .tabla-intro{
     display: flex;
@@ -394,14 +411,9 @@ footer .final{
     align-items: center;
 }
 
-.tabla-intro img{
-    max-width: 100px;
-    border-radius: 50%;
-    border: 2px solid var(--gray-color);
-}
-
 .tabla-intro h1{
-    color: var(--azul-color);
+    text-align: center;
+    color: var(--white-color);
     font-family: 'Roboto' sans-serif;
 }
 
@@ -415,27 +427,126 @@ footer .final{
     margin: 20px 0;
 }
 
-.frm-busqueda input[type="text"]{
-    flex-basis: 80%;
+.frm-busqueda input{
+    flex-basis: 20%;
+    right: auto;
     padding: 10px;
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--magenta-color);
+    border-radius: 20%;
 }
 
+.frm-busqueda button{
+    flex-basis: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
 
-table{
+.tbl-paciente{
+    
     width: 100%;
-    border: 2px salid var(--dark-color);
+    background-color: var(--gris-color);
+    border: 2px salid var(--magenta-color);
     border-collapse: collapse;
 }
 
-table th{
-    border: 2px solid var(--dark-color);
-    background-color: var(--purple-color);
-    color: var(--white-color);
-    padding: 7px 0;
+.tbl-paciente th{
+    border: 2px solid var(--magenta-color);
+    background-color: var(--darkazul-color);
+    color: var(--gris-color);
+    padding: 10px 0;
 }
 
-table td{
-    border: 2px solid var(--dark-color);
+.tbl-paciente td{
+    border: 2px solid var(--magenta-color);
     text-align: center;
+    padding: 10px 0;
+}
+
+.btn-magenta{
+    background-color: var(--magenta-color);
+    border-radius: 5%;
+    font-weight: bold;
+}
+
+.btn-rojo{
+    background-color: var(--rojo-color);
+    border-radius: 5%;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-naranja{
+    background-color: var(--naranja-color);
+    border-radius: 5%;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-gris{
+    background-color: #929292;
+    border-radius: 5%;
+    font-weight: bold;
+}
+
+.btn-magenta, .btn-rojo, .btn-naranja, .btn-gris{
+    padding: 0.5rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+/*==================================Registro pacientes========================================*/
+
+.header{
+    background-color: var(--darkazul-color);
+}
+
+.contenidos{
+    display: flex;
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabla-intro{
+    background-color: var(--azul-color);
+    border-radius: 7%;
+    color: white;
+}
+
+.tabla-intro h1{
+    margin-left: 500px;
+    font-size: 26px;
+}
+
+.conten{
+    width: 80%;
+    background: var(--gris-color);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.frm-titlles{
+    /*font-size: 25px;*/
+    font-weight: 500;
+    position: relative;
+}
+
+.frm-titlles::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+}
+
+.frm-titlles form .frm-conten{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+
+form .formulario{
+    width: calc(100% / 2 - 20px);
 }
